@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Navigation</string>
+    <string name="dummy_content">Fragment 1</string>
+    <string name="dummy_content_2">Fragment 2</string>
+    <string name="go_to_second_fragment">Go to fragment 2</string>
+    <string name="go_back">Go Back</string>
+</resources>
