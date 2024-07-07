@@ -3,7 +3,7 @@ package com.ukrdroiddev.navigation
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.ukrdroiddev.navigation.databinding.Fragment2Binding
 
 class Fragment2 : Fragment(R.layout.fragment_2) {
@@ -12,12 +12,12 @@ class Fragment2 : Fragment(R.layout.fragment_2) {
     private val binding
         get() = _binding!!
 
+    private val args by navArgs<Fragment2Args>()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = Fragment2Binding.bind(view)
-        binding.btnNavigateUp.setOnClickListener {
-            findNavController().popBackStack()
-        }
+        binding.counter.text = args.counter.toString()
     }
 
     override fun onDestroyView() {

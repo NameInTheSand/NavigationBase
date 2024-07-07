@@ -10,12 +10,20 @@
         android:label="@string/dummy_content">
         <action
             android:id="@+id/action_fragment_1_to_fragment_2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
             app:destination="@id/fragment_2" />
     </fragment>
 
     <fragment
         android:id="@+id/fragment_2"
         android:name="com.ukrdroiddev.navigation.Fragment2"
-        android:label="@string/dummy_content_2"/>
+        android:label="@string/dummy_content_2">
+
+        <argument
+            android:name="counter"
+            app:argType="integer" />
+
+    </fragment>
 
 </navigation>
